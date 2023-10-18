@@ -342,6 +342,11 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!4 &1513503854 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5869411013547198599, guid: 097b2b658974d9cf2aec29b73073bed4, type: 3}
+  m_PrefabInstance: {fileID: 5614973325607244258}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1992703715
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,6 +549,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Town Center
       objectReference: {fileID: 0}
+    - target: {fileID: 4327883143527203130, guid: 097b2b658974d9cf2aec29b73073bed4, type: 3}
+      propertyPath: _spawnPoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4327883143527203130, guid: 097b2b658974d9cf2aec29b73073bed4, type: 3}
+      propertyPath: _spawnPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1513503854}
     - target: {fileID: 4956643308770750350, guid: 097b2b658974d9cf2aec29b73073bed4, type: 3}
       propertyPath: _createdUnit
       value: 

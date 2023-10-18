@@ -1,0 +1,66 @@
+{
+    "name": "PlayerInput",
+    "maps": [
+        {
+            "name": "Controls",
+            "id": "d9eee68b-9fcb-4d11-965a-71c68e8c6b9c",
+            "actions": [
+                {
+                    "name": "OneTouch",
+                    "type": "Button",
+                    "id": "e49140e9-ab54-4c18-b6d3-0546b7261add",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "HoldTouch",
+                    "type": "Button",
+                    "id": "520a1864-c7d9-4095-8cb2-ade2f280dc5b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "aeed323d-358f-4754-8f6f-373e0d446fc3",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "New control scheme",
+                    "action": "OneTouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0229ea4d-3f30-4afe-9f01-cb9f5a1080c4",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "New control scheme",
+                    "action": "HoldTouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "New control scheme",
+            "bindingGroup": "New control scheme",
+            "devices": [
+                {
+                    "devicePath": "<Touchscreen>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
