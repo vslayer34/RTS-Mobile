@@ -29,21 +29,21 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             ""actions"": [
                 {
                     ""name"": ""OneTouch"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""e49140e9-ab54-4c18-b6d3-0546b7261add"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""HoldTouch"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""520a1864-c7d9-4095-8cb2-ade2f280dc5b"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [

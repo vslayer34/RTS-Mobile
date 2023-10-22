@@ -24,11 +24,20 @@ public class InputManager : MonoBehaviour
 
     private void Start()
     {
-        _oneTouch.performed += (ctx) => {};
+        _oneTouch.started += (ctx) =>
+        {
+            _InputTracker.touchPosition = GetTouchPosition(Touchscreen.current.primaryTouch.position.ReadValue());
+            _InputTracker.onOneTouch?.Invoke();
+        };
+
+        _holdTouch.performed += (ctx) => { _InputTracker.onHoldTouch?.Invoke(); };
     }
 
-    private void OnDisable()
+    private Vector3 GetTouchPosition(Vector2 touchPosition)
     {
-
-    }
+        
+        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(touchPosition);
+        worldPosition.z = 0;
+        return worldPosition;
+    } 
 }
