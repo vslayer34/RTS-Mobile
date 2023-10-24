@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class MenuReference : MonoBehaviour
 {   
+    /// <summary>
+    /// Static Instance of the MenuReferance script
+    /// </summary>
+    /// <value></value>
     public static MenuReference Instance { get; private set; }
 
     // [field: SerializeField, Tooltip("Refernece to town center menu")]
@@ -27,6 +31,9 @@ public class MenuReference : MonoBehaviour
             Instance = this;
     }
 
+    /// <summary>
+    /// Close the menu from the invisible background button
+    /// </summary>
     public void CloseMenu()
     {
         BuildMenu.GetComponent<MenuAnimations>().CloseMenu();

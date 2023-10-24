@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// The Parent class that contains all friendly buildings common behaviours
+/// </summary>
 public class Building : MonoBehaviour, ITouchOnce
 {
     [SerializeField,Tooltip("referance to the menus")]
@@ -13,7 +16,9 @@ public class Building : MonoBehaviour, ITouchOnce
     [SerializeField, Tooltip("Manager input tracker")]
     protected SO_InputTracker _InputTracker;
 
-
+    /// <summary>
+    /// The coolider of that specific building
+    /// </summary>
     protected BoxCollider2D _buildingCollider;
 
    
@@ -33,6 +38,10 @@ public class Building : MonoBehaviour, ITouchOnce
         _InputTracker.onHoldTouch -= DoTaskOnTouch;
     }
 
+
+    /// <summary>
+    /// Dedect player's touch and act accordingly
+    /// </summary>
     public void DoTaskOnTouch()
     {
         if (_buildingCollider.OverlapPoint(_InputTracker.touchPosition))
@@ -46,6 +55,10 @@ public class Building : MonoBehaviour, ITouchOnce
         }        
     }
 
+    /// <summary>
+    /// Open the specific menu
+    /// </summary>
+    /// <param name="menu">referance to the menu from the <paramref name="MenuReferance"/></param>
     public void OpenMenu(Transform menu)
     {
         menu.GetComponent<MenuAnimations>().OpenMenu(_buildingCollider);

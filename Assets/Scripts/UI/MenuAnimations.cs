@@ -7,22 +7,26 @@ using UnityEngine.EventSystems;
 
 public class MenuAnimations : MonoBehaviour
 {
+    /// <summary>
+    /// enum for the screen state
+    ///  None: In game
+    ///  Menu: there's a menu open
+    /// </summary>
     private enum CurrentScreen { None, Menu }
 
+    /// <summary>
+    /// variable for the screen state
+    /// </summary>
     private CurrentScreen _currentScreen = CurrentScreen.None;
     private Animator _animator;
+    
+    // animation clips
     private int _popOutClip;
     private int _popInClip;
 
     private int _closeAnimationTrigger;
 
 
-    private void Awake()
-    {
-        EventSystem.current.SetSelectedGameObject(gameObject);
-        Debug.Log(EventSystem.current.currentSelectedGameObject);
-
-    }
     private void Start()
     {
         _animator = GetComponent<Animator>();
@@ -31,6 +35,10 @@ public class MenuAnimations : MonoBehaviour
     }
 
 
+    /// <summary>
+    /// spawn the menu to the building location and open it
+    /// </summary>
+    /// <param name="parentCollider">the collider of the parent building to get its dimensions</param>
     public void OpenMenu(BoxCollider2D parentCollider)
     {   
         _animator?.ResetTrigger(_closeAnimationTrigger);
@@ -39,6 +47,9 @@ public class MenuAnimations : MonoBehaviour
         MenuReference.Instance.Background.SetActive(true);
     }
 
+    /// <summary>
+    /// Close the menu when clicked anywhere but it
+    /// </summary>
     public void CloseMenu()
     {   
         if (_currentScreen == CurrentScreen.None)
@@ -51,6 +62,9 @@ public class MenuAnimations : MonoBehaviour
         // gameObject.SetActive(false);
     }
 
+    /// <summary>
+    /// Disable the menu and change <paramref name="_currentScreen"/> mode
+    /// </summary>
     public void DisableMenu()
     {
         if (_currentScreen == CurrentScreen.Menu)

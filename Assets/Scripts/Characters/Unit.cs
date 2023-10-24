@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField, Tooltip("Referance to the unit state")]
     private SO_UnitStat _unitStat;
+
     [field: SerializeField, Header("Unit Stats"), Tooltip("Displays the unit health")]
     public float Health { get; protected set; }
+    
     [field: SerializeField, Tooltip("Displays the unit movement speed")]
     public float Speed { get; protected set; }
 
+    /// <summary>
+    /// Initialize the state of the units to the setup values
+    /// </summary>
+    /// <value>The stats are stored in the scriptable objects for each unit</value>
     protected void InitialzeStats()
     {
         Health = _unitStat.health;
