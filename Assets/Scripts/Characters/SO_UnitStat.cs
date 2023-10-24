@@ -7,6 +7,13 @@ public class SO_UnitStat : ScriptableObject
 {
     [Tooltip("Unit health")]
     public float health;
+
     [Tooltip("Unit movement speed")]
     public float speed;
+
+    [Tooltip("Unit UI Icon")]
+    public Sprite unitIcon;
+
+    [Tooltip("Unit Description")]
+    public string unitDescription;
 }

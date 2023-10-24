@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
-    [SerializeField, Tooltip("Referance to the unit state")]
-    private SO_UnitStat _unitStat;
+    [field: SerializeField, Tooltip("Referance to the unit state")]
+    public SO_UnitStat UnitStat { get; protected set; }
 
     [field: SerializeField, Header("Unit Stats"), Tooltip("Displays the unit health")]
     public float Health { get; protected set; }
-    
+
     [field: SerializeField, Tooltip("Displays the unit movement speed")]
     public float Speed { get; protected set; }
 
@@ -19,7 +19,7 @@ public class Unit : MonoBehaviour
     /// <value>The stats are stored in the scriptable objects for each unit</value>
     protected void InitialzeStats()
     {
-        Health = _unitStat.health;
-        Speed = _unitStat.speed;
+        Health = UnitStat.health;
+        Speed = UnitStat.speed;
     }
-}
+}   

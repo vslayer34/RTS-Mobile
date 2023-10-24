@@ -1,21 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// The behaviour and properties of units build menus
 /// </summary>
 public class BuildMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [field: SerializeField, Tooltip("Referance to the unit building buttons")]
+    public GameObject[] UnitBuildButtons { get; private set; }
+    
+    [field: SerializeField, Tooltip("Referance to the unit ui container")]
+    public Transform UnitCreationUI { get; private set; }
+
+    private Image _unitIcon;
+    private TextMeshProUGUI _unitDescription;
+
+
+    private void Start()
     {
-        
+        _unitIcon = UnitCreationUI.GetChild(0).GetComponent<Image>();
+        _unitDescription = UnitCreationUI.GetChild(1).GetComponent<TextMeshProUGUI>();
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void PopulateMenu(SO_UnitStat unit)
     {
-        
+        Debug.Log(unit.unitDescription);
+        // _unitIcon.sprite = unit.unitIcon;
+        // _unitDescription.text = unit.unitDescription;
     }
 }

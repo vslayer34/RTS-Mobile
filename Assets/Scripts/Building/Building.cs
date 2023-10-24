@@ -47,7 +47,11 @@ public class Building : MonoBehaviour, ITouchOnce
         if (_buildingCollider.OverlapPoint(_InputTracker.touchPosition))
         {
             Debug.Log("Don't touch me PERVERT");
-            Debug.Log("pop a menu");
+            // Debug.Log("pop a menu");
+
+            // populate the build menu
+            BuildMenu buildMenuScript = _menuReference.BuildMenu.GetComponent<BuildMenu>();
+            buildMenuScript.PopulateMenu(_createdUnit.GetComponent<Unit>().UnitStat);
 
             // Pop up build menu
             OpenMenu(_menuReference.BuildMenu);

@@ -55,7 +55,7 @@ public class MenuAnimations : MonoBehaviour
         if (_currentScreen == CurrentScreen.None)
             return;
 
-        Debug.Log("I'm called");
+        // Debug.Log("I'm called");
         _animator.SetTrigger(_closeAnimationTrigger);
         MenuReference.Instance.Background.SetActive(false);
         
@@ -69,14 +69,14 @@ public class MenuAnimations : MonoBehaviour
     {
         if (_currentScreen == CurrentScreen.Menu)
         {
-            Debug.Log("Animation Event: at start");
+            // Debug.Log("Animation Event: at start");
             _currentScreen = CurrentScreen.None;
             gameObject.SetActive(false);
             // gameObject.SetActive(false);
         }
         else if (_currentScreen == CurrentScreen.None)
         {
-            Debug.Log("Animation Event: at end");
+            // Debug.Log("Animation Event: at end");
             _currentScreen = CurrentScreen.Menu;
         }
         // if (gameObject.activeSelf.Equals(true))

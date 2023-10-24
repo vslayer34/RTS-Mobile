@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b14c52c09b41ae67b2b94a9ab38ef33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _unitStat: {fileID: 11400000, guid: db62bad86654201188aee448dd99f64f, type: 2}
+  <UnitStat>k__BackingField: {fileID: 11400000, guid: db62bad86654201188aee448dd99f64f, type: 2}
   <Health>k__BackingField: 0
   <Speed>k__BackingField: 0
 --- !u!1001 &4721570385505526819
