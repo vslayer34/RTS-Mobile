@@ -279,6 +279,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4390458697091287023, guid: 4d99e448bdaffe4cfb73cdb310fc1719, type: 3}
   m_PrefabInstance: {fileID: 4968773121703690027}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &421967844 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8453164147365503365, guid: 4d99e448bdaffe4cfb73cdb310fc1719, type: 3}
+  m_PrefabInstance: {fileID: 4968773121703690027}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &755202685
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,6 +563,32 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 433858782559536503, guid: 4d99e448bdaffe4cfb73cdb310fc1719, type: 3}
   m_PrefabInstance: {fileID: 4968773121703690027}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1118319181 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 768221602074174427, guid: 4d99e448bdaffe4cfb73cdb310fc1719, type: 3}
+  m_PrefabInstance: {fileID: 4968773121703690027}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118319179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1118319184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118319179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cac2cee9911ccd49bf0ae683749a3f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI_FlagPointerButton
+  _flagBtn: {fileID: 1118319181}
+  _inputTracker: {fileID: 11400000, guid: 2524f57836b6904eb88ad89a7698451b, type: 2}
+  _flagPrefab: {fileID: 3658045092194371290, guid: 45502901fa1fca642922e96db339a293, type: 3}
 --- !u!1 &1177381691
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,6 +1216,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1177381692}
     m_Modifications:
+    - target: {fileID: 433858782559536503, guid: 4d99e448bdaffe4cfb73cdb310fc1719, type: 3}
+      propertyPath: m_Name
+      value: Icon 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 433858782559536503, guid: 4d99e448bdaffe4cfb73cdb310fc1719, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849204187026487656, guid: 4d99e448bdaffe4cfb73cdb310fc1719, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2062442420273054620, guid: 4d99e448bdaffe4cfb73cdb310fc1719, type: 3}
       propertyPath: m_SizeDelta.y
       value: 6.5612
@@ -1192,6 +1235,14 @@ PrefabInstance:
     - target: {fileID: 2062442420273054620, guid: 4d99e448bdaffe4cfb73cdb310fc1719, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 3.2806
+      objectReference: {fileID: 0}
+    - target: {fileID: 2560003393032637108, guid: 4d99e448bdaffe4cfb73cdb310fc1719, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 421967844}
+    - target: {fileID: 4390458697091287023, guid: 4d99e448bdaffe4cfb73cdb310fc1719, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4861385263855188500, guid: 4d99e448bdaffe4cfb73cdb310fc1719, type: 3}
       propertyPath: _unitIcon
@@ -1352,7 +1403,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 433858782559536503, guid: 4d99e448bdaffe4cfb73cdb310fc1719, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1118319184}
   m_SourcePrefab: {fileID: 100100000, guid: 4d99e448bdaffe4cfb73cdb310fc1719, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

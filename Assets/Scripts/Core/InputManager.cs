@@ -21,6 +21,11 @@ public class InputManager : MonoBehaviour
         _holdTouch = _playerInput.Controls.HoldTouch;
     }
 
+    private void OnDestroy()
+    {
+        _playerInput.Disable();
+    }
+
 
     private void Start()
     {
@@ -38,6 +43,8 @@ public class InputManager : MonoBehaviour
         
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(touchPosition);
         worldPosition.z = 0;
+
+        Debug.Log(worldPosition);
         return worldPosition;
     } 
 }
