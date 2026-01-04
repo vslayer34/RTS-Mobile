@@ -41,14 +41,17 @@ public class MenuAnimations : MonoBehaviour
     /// <param name="parentCollider">the collider of the parent building to get its dimensions</param>
     public void OpenMenu(BoxCollider2D parentCollider)
     {   
+        // _currentScreen = CurrentScreen.Menu;
         _animator?.ResetTrigger(_closeAnimationTrigger);
         transform.position = new Vector2(parentCollider.transform.position.x, parentCollider.transform.position.y + parentCollider.offset.y);
         transform.gameObject?.SetActive(true);
         MenuReference.Instance.Background.SetActive(true);
+
     }
 
     /// <summary>
     /// Close the menu when clicked anywhere but it
+    /// Called by the background OnClick Unity event
     /// </summary>
     public void CloseMenu()
     {   
@@ -58,27 +61,33 @@ public class MenuAnimations : MonoBehaviour
         // Debug.Log("I'm called");
         _animator.SetTrigger(_closeAnimationTrigger);
         MenuReference.Instance.Background.SetActive(false);
+
+        // _currentScreen = CurrentScreen.None;
         
         // gameObject.SetActive(false);
     }
 
+    // Called by tthe pop out animator
+    public void SetCurrentMenuToActive() => _currentScreen = CurrentScreen.Menu;
+
     /// <summary>
     /// Disable the menu and change <paramref name="_currentScreen"/> mode
+    /// Called by the pop in animator
     /// </summary>
     public void DisableMenu()
     {
-        if (_currentScreen == CurrentScreen.Menu)
-        {
+        // if (_currentScreen == CurrentScreen.Menu)
+        // {
             // Debug.Log("Animation Event: at start");
             _currentScreen = CurrentScreen.None;
             gameObject.SetActive(false);
             // gameObject.SetActive(false);
-        }
-        else if (_currentScreen == CurrentScreen.None)
-        {
-            // Debug.Log("Animation Event: at end");
-            _currentScreen = CurrentScreen.Menu;
-        }
+        // }
+        // else if (_currentScreen == CurrentScreen.None)
+        // {
+        //     // Debug.Log("Animation Event: at end");
+        //     _currentScreen = CurrentScreen.Menu;
+        // }
         // if (gameObject.activeSelf.Equals(true))
         // {
         //     // gameObject.SetActive(false);

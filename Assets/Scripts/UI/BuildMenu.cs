@@ -15,21 +15,25 @@ public class BuildMenu : MonoBehaviour
     [field: SerializeField, Tooltip("Referance to the unit ui container")]
     public Transform UnitCreationUI { get; private set; }
 
+    [SerializeField, Header("UI Components")]
     private Image _unitIcon;
+
+    [SerializeField]
     private TextMeshProUGUI _unitDescription;
 
 
     private void Start()
     {
-        _unitIcon = UnitCreationUI.GetChild(0).GetComponent<Image>();
-        _unitDescription = UnitCreationUI.GetChild(1).GetComponent<TextMeshProUGUI>();
+        // _unitIcon = UnitCreationUI.GetChild(0).GetComponent<Image>();
+        // _unitDescription = UnitCreationUI.GetChild(1).GetComponent<TextMeshProUGUI>();
     }
 
 
     public void PopulateMenu(SO_UnitStat unit)
     {
         Debug.Log(unit.unitDescription);
-        // _unitIcon.sprite = unit.unitIcon;
-        // _unitDescription.text = unit.unitDescription;
+        
+        _unitIcon.sprite = unit.unitIcon;
+        _unitDescription.text = unit.unitDescription;
     }
 }
